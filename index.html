@@ -4,42 +4,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>waris reshi</title>
+  <title>frederick potticary</title>
   <style>
     :root {
       --bg: #fdfdfd;
       --text: #111;
       --muted: #666;
-      --link: #007acc;
+      --link: #111;
       --card-bg: #fff;
     }
 
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #111;
-        --text: #fdfdfd;
-        --muted: #aaa;
-        --link: #4eaaff;
-        --card-bg: #1a1a1a;
-      }
+    body.dark {
+      --bg: #111;
+      --text: #fdfdfd;
+      --muted: #aaa;
+      --link: #fdfdfd;
+      --card-bg: #1a1a1a;
     }
 
     body {
       margin: 0;
-      font-family: system-ui, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
       display: flex;
       justify-content: center;
       align-items: start;
-      padding: 2rem 1rem;
+      padding: 1rem;
       min-height: 100vh;
+      transition: background 0.3s, color 0.3s;
     }
 
     .container {
       max-width: 720px;
       width: 100%;
       text-align: center;
+      position: relative;
+    }
+
+    .toggle-button {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      padding: 0.4rem 0.8rem;
+      background: none;
+      border: 1px solid var(--muted);
+      border-radius: 5px;
+      color: var(--text);
+      cursor: pointer;
+      font-size: 0.8rem;
     }
 
     img.profile {
@@ -58,50 +71,29 @@
 
     h2 {
       font-size: 1.3rem;
-      margin-top: 2.5rem;
+      margin-top: 2rem;
       border-bottom: 1px solid var(--muted);
       padding-bottom: 0.5rem;
     }
 
-    p {
+    p, li {
       margin: 0.5rem 0;
+      line-height: 1.5;
     }
 
-    .colophon {
-      font-size: 0.9rem;
-      margin-top: 2rem;
-      color: var(--muted);
+    ul {
+      list-style-type: none;
+      padding: 0;
     }
 
     a {
+      font-weight: bold;
       color: var(--link);
       text-decoration: none;
     }
 
     a:hover {
       text-decoration: underline;
-    }
-
-    footer {
-      margin-top: 3rem;
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
-
-    .embed {
-      margin: 1.5rem auto;
-      width: 100%;
-      max-width: 100%;
-      aspect-ratio: 16/9;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-
-    .socials a {
-      margin: 0 0.5rem;
-      font-weight: bold;
-      color: var(--link);
     }
 
     @media (min-width: 800px) {
@@ -114,42 +106,56 @@
     }
   </style>
 </head>
-<body>
+<body class="dark">
   <div class="container">
-    <img src="profile.jpg" alt="Waris Reshi" class="profile">
-    <h1>waris reshi</h1>
-    <p><strong>entrepreneur, developer and athlete</strong></p>
-    <p>co-founder of Asent · based in Srinagar</p>
+    <button class="toggle-button" onclick="toggleTheme()" id="themeToggle">light</button>
+    <img src="profile.jpg" alt="Frederick Potticary" class="profile">
+    <h1>frederick potticary</h1>
+    <p><strong>entrepreneur, professional, athlete</strong></p>
+    <p>based in london</p>
 
     <h2>projects</h2>
-    <div class="embed">
-      <iframe src="https://example.com" width="100%" height="100%" frameborder="0"></iframe>
-    </div>
-    <div class="embed">
-      <iframe src="https://codepen.io/anon/embed/preview/KKVWEGN" width="100%" height="100%" frameborder="0"></iframe>
-    </div>
+    <ul>
+      <li><a href="https://www.bamboai.com" target="_blank">bambo</a> · worked with 75+ B2B enterprises on scaling their linkedin acquisition</li>
+      <li><a href="https://www.linkedinoperator.com" target="_blank">linkedin operator</a> · founded the linkedin agency model (community coming soon)</li>
+      <li><a href="https://www.getclients.pro" target="_blank">acquisition os</a> · building an AI virality tool (in stealth mode)</li>
+    </ul>
 
     <h2>interests</h2>
-    <p><strong>technology</strong> · uplifting human potential through tech</p>
-    <p><strong>AI</strong> · conversational systems @ Asent</p>
-    <p><strong>entrepreneurship</strong> · enabling others to build</p>
-    <p><strong>human performance</strong> · running, climbing, strength</p>
-    <p><strong>math & physics</strong> · exploring the cosmos</p>
+    <p><strong>making money</strong> · literally the REAL reason why people do this shit</p>
+    <p><strong>sports</strong> · played college-level basketball & cricket</p>
+    <p><strong>building</strong> · apps, websites, software, etc</p>
+    <p><strong>the real world</strong></p>
+
+    <h2>achievements</h2>
+    <ul>
+      <li>made $150k at 16</li>
+      <li>built a 10-person company</li>
+      <li>5 As & 2 A*s</li>
+    </ul>
+
+    <h2>manifestation<br><small>(in the next 2 years · 14/07/27)</small></h2>
+    <ul>
+      <li>$1M liquid</li>
+      <li>a company valued at $5M</li>
+      <li>travelled 25+ countries</li>
+    </ul>
 
     <h2>socials</h2>
-    <div class="socials">
-      <a href="#">GitHub</a>
-      <a href="#">X</a>
-      <a href="#">LinkedIn</a>
-    </div>
-
-    <div class="colophon">
-      <p>This site is just plain HTML & CSS. No JavaScript, no frameworks.</p>
-      <p>Love Astro, Hugo, Next.js — but they’re overkill here.</p>
-    </div>
-
-    <p>Contact: <a href="mailto:waris@asent.app">waris@asent.app</a></p>
-    <footer>© mmxxv war</footer>
+    <ul>
+      <li><a href="https://www.linkedin.com/freddiep" target="_blank">linkedin</a></li>
+      <li><a href="https://www.youtube.com/@frederickpotticary" target="_blank">youtube</a></li>
+      <li><a href="mailto:freddiep@bamboai.com">email</a></li>
+    </ul>
   </div>
+
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      const button = document.getElementById('themeToggle');
+      body.classList.toggle('dark');
+      button.textContent = body.classList.contains('dark') ? 'light' : 'dark';
+    }
+  </script>
 </body>
 </html>
