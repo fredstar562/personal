@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>waris reshi</title>
+  <style>
+    :root {
+      --bg: #fdfdfd;
+      --text: #111;
+      --muted: #666;
+      --link: #007acc;
+      --card-bg: #fff;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111;
+        --text: #fdfdfd;
+        --muted: #aaa;
+        --link: #4eaaff;
+        --card-bg: #1a1a1a;
+      }
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      padding: 2rem 1rem;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 720px;
+      width: 100%;
+      text-align: center;
+    }
+
+    img.profile {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid #ccc;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin: 0.5rem 0;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      margin-top: 2.5rem;
+      border-bottom: 1px solid var(--muted);
+      padding-bottom: 0.5rem;
+    }
+
+    p {
+      margin: 0.5rem 0;
+    }
+
+    .colophon {
+      font-size: 0.9rem;
+      margin-top: 2rem;
+      color: var(--muted);
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .embed {
+      margin: 1.5rem auto;
+      width: 100%;
+      max-width: 100%;
+      aspect-ratio: 16/9;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .socials a {
+      margin: 0 0.5rem;
+      font-weight: bold;
+      color: var(--link);
+    }
+
+    @media (min-width: 800px) {
+      .container {
+        padding: 3rem;
+        background: var(--card-bg);
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="profile.jpg" alt="Waris Reshi" class="profile">
+    <h1>waris reshi</h1>
+    <p><strong>entrepreneur, developer and athlete</strong></p>
+    <p>co-founder of Asent · based in Srinagar</p>
+
+    <h2>projects</h2>
+    <div class="embed">
+      <iframe src="https://example.com" width="100%" height="100%" frameborder="0"></iframe>
+    </div>
+    <div class="embed">
+      <iframe src="https://codepen.io/anon/embed/preview/KKVWEGN" width="100%" height="100%" frameborder="0"></iframe>
+    </div>
+
+    <h2>interests</h2>
+    <p><strong>technology</strong> · uplifting human potential through tech</p>
+    <p><strong>AI</strong> · conversational systems @ Asent</p>
+    <p><strong>entrepreneurship</strong> · enabling others to build</p>
+    <p><strong>human performance</strong> · running, climbing, strength</p>
+    <p><strong>math & physics</strong> · exploring the cosmos</p>
+
+    <h2>socials</h2>
+    <div class="socials">
+      <a href="#">GitHub</a>
+      <a href="#">X</a>
+      <a href="#">LinkedIn</a>
+    </div>
+
+    <div class="colophon">
+      <p>This site is just plain HTML & CSS. No JavaScript, no frameworks.</p>
+      <p>Love Astro, Hugo, Next.js — but they’re overkill here.</p>
+    </div>
+
+    <p>Contact: <a href="mailto:waris@asent.app">waris@asent.app</a></p>
+    <footer>© mmxxv war</footer>
+  </div>
+</body>
+</html>
